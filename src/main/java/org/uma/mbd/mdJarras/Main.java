@@ -18,7 +18,7 @@ public class Main {
         jarB.vacia();
         System.out.println(jarA.toString());
 
-        Mesa mesaA = new Mesa (jarA, jarB);
+        Mesa mesaA = new Mesa(jarA, jarB);
         mesaA.llenaA();
         mesaA.vuelcaAsobreB();
         mesaA.llenaA();

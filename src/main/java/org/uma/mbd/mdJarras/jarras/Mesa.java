@@ -1,43 +1,55 @@
 package org.uma.mbd.mdJarras.jarras;
 
 public class Mesa {
-    private Jarra jarraA, jarraB;
-    public Mesa (Jarra capA, Jarra capB){
+    private final Jarra jarraA;
+    private final Jarra jarraB;
+
+    public Mesa(Jarra capA, Jarra capB) {
         jarraA = capA;
         jarraB = capB;
     }
-    public void llenaA(){
+
+    public void llenaA() {
         jarraA.llena();
     }
-    public void llenaB(){
+
+    public void llenaB() {
         jarraB.llena();
     }
-    public void vaciaA(){
+
+    public void vaciaA() {
         jarraA.vacia();
     }
-    public void vaciaB(){
+
+    public void vaciaB() {
         jarraB.vacia();
     }
-    public void vuelcaAsobreB(){
+
+    public void vuelcaAsobreB() {
         jarraB.llenaDesde(jarraA);
     }
-    public void vuelcaBsobreA(){
+
+    public void vuelcaBsobreA() {
         jarraA.llenaDesde(jarraB);
     }
-    public int getCapacidadA(){
-       return jarraA.getCapacidad();
+
+    public int getCapacidadA() {
+        return jarraA.getCapacidad();
     }
-    public int getCapacidadB(){
-       return jarraB.getCapacidad();
+
+    public int getCapacidadB() {
+        return jarraB.getCapacidad();
     }
-    public int getContenidoA(){
-       return jarraA.getContenido();
+
+    public int getContenidoA() {
+        return jarraA.getContenido();
     }
-    public int getContenidoB(){
+
+    public int getContenidoB() {
         return jarraB.getContenido();
     }
 
-    public String toString(){
-       return jarraA.toString() + "\n" + jarraB.toString();
+    public String toString() {
+        return jarraA.toString() + "\n" + jarraB.toString();
     }
 }
