@@ -1,6 +1,6 @@
-package org.uma.mbd.mdLibreria;
+package org.uma.mbd.mdLibreriaV2L;
 
-import org.uma.mbd.mdLibreria.libreria.Libreria;
+import org.uma.mbd.mdLibreriaV2L.libreria.Libreria;
 
 public class PruebaLibreria {
     public static void main(String [] args) {

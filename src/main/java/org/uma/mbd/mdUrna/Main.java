@@ -2,8 +2,6 @@ package org.uma.mbd.mdUrna;
 
 import org.uma.mbd.mdUrna.urnas.Urna;
 
-import java.util.NoSuchElementException;
-
 public class Main {
     public static void main(String[] args) {
         int nBl = Integer.parseInt(args[0]);
@@ -14,9 +12,7 @@ public class Main {
             Urna.ColorBola b2 = u.extraerBola();
             if (b1 == b2) {
                 u.ponerBlanca();
-            } else {
-                u.poner.negra();
-            }
+            } else u.ponerNegra();
 
         }
     }

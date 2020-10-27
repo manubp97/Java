@@ -1,4 +1,4 @@
-package org.uma.mbd.mdLibreria.libreria;
+package org.uma.mbd.mdLibreriaV3L.libreria;
 
 public class Libro {
     private String  autor;
