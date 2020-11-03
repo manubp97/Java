@@ -38,6 +38,7 @@ public class Libro {
 
     @Override
     public String toString() {
-        return "("+ autor +";" + titulo + ";" + precioBase + ";" + IVA +"%;"+ getPrecioFinal()+")";
+        return "("+ autor +";" + titulo + ";" + precioBase + ";" + IVA +"%;"
+                + getPrecioFinal()+")";
     }
 }

@@ -1,5 +1,6 @@
-package org.uma.mbd.mdLibreria1L.libreria;
+package org.uma.mbd.mdLibreriaV1L.libreria;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -10,13 +11,13 @@ public class Libreria {
         libros = new LinkedList<>();
     }
 
-
     private int posicionLibro(String autor, String titulo) {
         int pos = 0;
-        while (pos < numLibros && !(libros[pos].getAutor().equals(autor) && libros[pos].getTitulo().equals(titulo))) {
+        while (pos < libros.size() &&
+                !(libros.get(pos).getAutor().equals(autor) && libros.get(pos).getTitulo().equals(titulo))) {
             pos++;
         }
-        return (pos < numLibros) ? pos: -1;
+        return (pos < libros.size()) ? pos: -1;
     }
 
 
@@ -29,7 +30,7 @@ public class Libreria {
         int pos = posicionLibro(libro.getAutor(), libro.getTitulo());
         if (pos >= 0) {
             // el libro está en la posición pos
-            libros.set(pos, libro);
+            libros.set(pos,libro);
         } else {
             libros.add(libro);
         }
@@ -39,11 +40,12 @@ public class Libreria {
         int pos = posicionLibro(autor, titulo);
         if (pos >= 0) {
             libros.remove(pos);
+        }
     }
 
     public double getPrecioBase(String autor, String titulo) {
         int pos = posicionLibro(autor, titulo);
-        return (pos >= 0)? libros[pos].getPrecioBase() : 0;
+        return (pos >= 0)? libros.get(pos).getPrecioBase() : 0;
     }
 
     public double getPrecioFinal(String autor, String titulo) {
@@ -53,6 +55,6 @@ public class Libreria {
 
     @Override
     public String toString() {
-       return libros.toString();
+        return libros.toString();
     }
 }

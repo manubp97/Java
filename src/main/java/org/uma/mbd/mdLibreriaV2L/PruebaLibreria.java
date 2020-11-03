@@ -1,10 +1,12 @@
 package org.uma.mbd.mdLibreriaV2L;
 
 import org.uma.mbd.mdLibreriaV2L.libreria.Libreria;
+import org.uma.mbd.mdLibreriaV2L.libreria.LibreriaOferta;
 
 public class PruebaLibreria {
     public static void main(String [] args) {
-        Libreria libreria = new Libreria();
+        String [] autores = {"George Orwell", "Isaac Asimov"};
+        Libreria libreria = new LibreriaOferta(20, autores);
         libreria.addLibro("george orwell", "1984", 8.20);
         libreria.addLibro("Philip K. Dick", "¿Sueñan los androides con ovejas eléctricas?", 3.50);
         libreria.addLibro("Isaac Asimov", "Fundación e Imperio", 9.40);
