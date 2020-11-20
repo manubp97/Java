@@ -1,10 +1,7 @@
 package org.uma.mbd.mdNPI.npi;
 
 public class NPI {
-    private double x;
-    private double y;
-    private double z;
-    private double t;
+    private double x, y, z, t;
 
     public void entra(double valor){
             t = z; z = y; y = x; x = valor;

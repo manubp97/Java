@@ -42,11 +42,16 @@ public class Mesa {
     }
 
     public int getContenidoA() {
+
         return jarraA.getContenido();
     }
 
     public int getContenidoB() {
         return jarraB.getContenido();
+    }
+
+    public int getContenido() {
+        return jarraA.getContenido() + jarraB.getContenido();
     }
 
     public String toString() {

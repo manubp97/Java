@@ -41,8 +41,6 @@ public class Vector {
 
     @Override
     public String toString() {
-        return "Vector{" +
-                "extremo=" + extremo +
-                '}';
+        return "V{" + extremo + '}';
     }
 }
